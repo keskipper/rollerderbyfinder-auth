@@ -40,8 +40,9 @@ export default class Locator extends Component {
     render() {
         return (
             <div className="locator">
-            <button onClick={this.getLocation}>Get Location</button>
             <h1>Coordinates</h1>
+            <button onClick={this.getLocation}>Get Location</button>
+            
             <p>{this.state.status}</p>
             {this.state.lat && <p>Latitude: {this.state.lat}</p>}
             {this.state.lng && <p>Longitude: {this.state.lng}</p>}
