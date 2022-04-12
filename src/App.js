@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 
 import './App.css';
 
 import Login from './components/login';
 import Logout from './components/logout';
 import Locator from './components/locator';
+
+import User from './components/user';
 
 
 export default class App extends Component {
@@ -58,6 +61,11 @@ export default class App extends Component {
       }
 
       <Locator />
+<Router>
+        <Routes>
+          <Route path="/user" element={<User/>} />
+        </Routes>
+        </Router>
     </div>
     );
   }
